@@ -6,7 +6,7 @@ Every time a change is pushed on this repo a new docker container is built autom
 
 To install and push to dockerhub manually on would do,
 ```bash
-sudo docker build -t chriskypri/workhorse-r-prerequisite .
+sudo docker build -t [docker-USERNAME]/workhorse-r-prerequisite . # replace [docker-USERNAME] with your docker usename
 sudo docker login
-sudo docker push [docker-USERNAME]/workhorse-r-prerequisite
+sudo docker push [docker-USERNAME]/workhorse-r-prerequisite # replace [docker-USERNAME] with your docker usename
 ```
