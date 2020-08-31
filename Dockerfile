@@ -27,7 +27,7 @@ RUN mkdir workHORSE
 RUN cd workHORSE
 # Get from pCloud necessary files that cannot be stored on GitHub due to their large size 
 RUN wget -c https://filedn.com/lj14yWNHbMFXQ0F4Fkti6a8/workHORSE_data_files.tar -O - | tar -x
-RUN rm DELETEms*
+# RUN rm DELETEms*
 
 # WORKDIR /payload/
 # CMD ["R"]
