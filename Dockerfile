@@ -8,7 +8,7 @@ RUN apt-get -y update \
   && apt-get install -y \
   git git-core make zlib1g-dev libcurl4-openssl-dev libssl-dev\
   libicu-dev libjpeg-dev libpng-dev libgmp3-dev libmpfr-dev pandoc \
-  pandoc-citeproc \
+  pandoc-citeproc wget\
   && rm -rf /var/lib/apt/lists/*
   
 
