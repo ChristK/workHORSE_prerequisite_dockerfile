@@ -24,9 +24,9 @@ RUN installGithub.r "Rdatatable/data.table@be6c1fc66a411211c4ca944702c1cab773944
 RUN installGithub.r "ChristK/CKutils@8bb4c0d085a3b0b363a129e16252a32f2e528a0a"
 
 RUN mkdir /root/workHORSE
-RUN cd /root/workHORSE
+# RUN cd /root/workHORSE
 # Get from pCloud necessary files that cannot be stored on GitHub due to their large size 
-RUN wget -c https://filedn.com/lj14yWNHbMFXQ0F4Fkti6a8/workHORSE_data_files.tar -O - | tar -x
+RUN wget -c https://filedn.com/lj14yWNHbMFXQ0F4Fkti6a8/workHORSE_data_files.tar -O - | tar -x -C /root/workHORSE/
 # RUN rm DELETEms*
 
 # WORKDIR /payload/
