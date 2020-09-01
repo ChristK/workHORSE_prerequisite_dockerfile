@@ -14,12 +14,14 @@ RUN apt-get -y update \
 
 # Repo frozen on 24/08/2020. See https://packagemanager.rstudio.com/client/#/repos/1/overview
 RUN install2.r -s \
-  -r "https://packagemanager.rstudio.com/all/__linux__/focal/314" \
+  -r "https://packagemanager.rstudio.com/all/__linux__/focal/316" \
   -e -n 1 \
   bsplus colourpicker dichromat doFuture doParallel doRNG dqrng DT foreach \
   fst future future.apply gamlss.dist ggplot2 htmltools iterators MASS \
   plotly promises qs remotes rngtools shiny shinyBS shinydashboard shinyjs \
-  shinythemes shinyWidgets viridis viridisLite wrswoR yaml data.table
+  shinythemes shinyWidgets viridis viridisLite wrswoR yaml data.table \
+  mvtnorm gamlss.data mc2d cowplot gamlss
+  
 RUN installGithub.r "Rdatatable/data.table@be6c1fc66a411211c4ca944702c1cab7739445f3"
 RUN installGithub.r "ChristK/CKutils@8bb4c0d085a3b0b363a129e16252a32f2e528a0a"
 
