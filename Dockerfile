@@ -1,4 +1,4 @@
-FROM rocker/r-ver:4.0.2
+FROM rocker/r-ver:4.0.3
 
 LABEL maintainer "Chris Kypridemos <ckyprid@liverpool.ac.uk>"
 
@@ -12,9 +12,9 @@ RUN apt-get -y update \
   && rm -rf /var/lib/apt/lists/*
   
 
-# Repo frozen on 31/08/2020. See https://packagemanager.rstudio.com/client/#/repos/1/overview
+# Repo frozen on October 20, 2020. See https://packagemanager.rstudio.com/client/#/repos/1/overview
 RUN install2.r -s \
-  -r "https://packagemanager.rstudio.com/all/__linux__/focal/316" \
+  -r "https://packagemanager.rstudio.com/all/__linux__/focal/349" \
   -e -n 1 \
   bsplus colourpicker dichromat doFuture doParallel doRNG dqrng DT foreach \
   fst future future.apply gamlss.dist ggplot2 htmltools iterators MASS \
