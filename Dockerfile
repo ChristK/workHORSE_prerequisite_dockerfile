@@ -20,9 +20,9 @@ RUN install2.r -s \
   fst future future.apply gamlss.dist ggplot2 htmltools iterators MASS \
   plotly promises qs remotes rngtools shiny shinyBS shinydashboard shinyjs \
   shinythemes shinyWidgets viridis viridisLite wrswoR yaml data.table \
-  mvtnorm gamlss.data mc2d cowplot gamlss
+  mvtnorm gamlss.data mc2d cowplot gamlss data.table
   
-RUN installGithub.r "Rdatatable/data.table@be6c1fc66a411211c4ca944702c1cab7739445f3"
+# RUN installGithub.r "Rdatatable/data.table@be6c1fc66a411211c4ca944702c1cab7739445f3"
 RUN installGithub.r "ChristK/CKutils@8bb4c0d085a3b0b363a129e16252a32f2e528a0a"
 
 RUN mkdir /root/workHORSE
