@@ -12,9 +12,9 @@ RUN apt-get -y update \
   && rm -rf /var/lib/apt/lists/*
   
 
-# Repo frozen on March 1, 2021. See https://packagemanager.rstudio.com/client/#/repos/1/overview
+# Repo frozen on March 3, 2021. See https://packagemanager.rstudio.com/client/#/repos/1/overview
 RUN install2.r -s \
-  -r "https://packagemanager.rstudio.com/all/1623553" \
+  -r "https://packagemanager.rstudio.com/all/1657803" \
   -e -n 10 \
   bsplus colourpicker dichromat doFuture doParallel doRNG dqrng DT foreach \
   fst future future.apply gamlss.dist ggplot2 htmltools iterators MASS \
