@@ -1,4 +1,4 @@
-FROM rocker/r-ver:4.1.0
+FROM rocker/r-ver:4.0.5
 
 LABEL maintainer "Chris Kypridemos <ckyprid@liverpool.ac.uk>"
 
