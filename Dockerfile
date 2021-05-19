@@ -1,4 +1,4 @@
-FROM rocker/r-ver:4.0.5
+FROM rocker/r-ver:4.1.0
 
 LABEL maintainer "Chris Kypridemos <ckyprid@liverpool.ac.uk>"
 
@@ -12,9 +12,9 @@ RUN apt-get -y update \
   && rm -rf /var/lib/apt/lists/*
 
 
-# Repo frozen on May 13, 2021. See https://packagemanager.rstudio.com/client/#/repos/1/overview
+# Repo frozen on May 18, 2021. See https://packagemanager.rstudio.com/client/#/repos/1/overview
 RUN install2.r -s \
-  -r "https://packagemanager.rstudio.com/all/2886503" \
+  -r "https://packagemanager.rstudio.com/all/2976243" \
   -e -n 10 \
   bsplus colourpicker dichromat doFuture doParallel doRNG dqrng DT foreach \
   fst future future.apply gamlss.dist ggplot2 htmltools iterators MASS \
@@ -22,8 +22,4 @@ RUN install2.r -s \
   shinythemes shinyWidgets viridis viridisLite wrswoR yaml data.table \
   mvtnorm gamlss.data mc2d cowplot gamlss digest piggyback
   
-RUN installGithub.r "ChristK/CKutils@8bb4c0d085a3b0b363a129e16252a32f2e528a0a"
-
-# RUN mkdir /root/workHORSE
-# Get from pCloud necessary files that cannot be stored on GitHub due to their large size 
-# RUN wget -c https://filedn.com/lj14yWNHbMFXQ0F4Fkti6a8/workHORSE_data_files.tar -O - | tar -x -C /root/workHORSE/
+RUN installGithub.r "ChristK/CKutils"
