@@ -1,4 +1,4 @@
-FROM rocker/r-ver:4.2.1
+FROM rocker/r-ver:4.0.5
 
 LABEL maintainer "Chris Kypridemos <ckyprid@liverpool.ac.uk>"
 
@@ -12,14 +12,14 @@ RUN apt-get -y update \
   && rm -rf /var/lib/apt/lists/*
 
 
-# Repo frozen on August 01, 2022. See https://packagemanager.rstudio.com/client/#/repos/1/overview
+# Repo frozen on May 18, 2021. See https://packagemanager.rstudio.com/client/#/repos/1/overview
 RUN install2.r -s \
-  -r "https://packagemanager.rstudio.com/all/__linux__/focal/2022-08-01+Y3JhbiwyOjQ1MjYyMTU7RTY0MEEyRTM" \
+  -r "https://packagemanager.rstudio.com/all/2976243" \
   -e -n 10 \
   bsplus colourpicker dichromat doFuture doParallel doRNG dqrng DT foreach \
   fst future future.apply gamlss.dist ggplot2 htmltools iterators MASS \
   plotly promises qs remotes rngtools shiny shinyBS shinydashboard shinyjs \
   shinythemes shinyWidgets viridis viridisLite wrswoR yaml data.table \
   mvtnorm gamlss.data mc2d cowplot gamlss digest piggyback
-
+  
 RUN installGithub.r "ChristK/CKutils"
