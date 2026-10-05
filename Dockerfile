@@ -22,4 +22,4 @@ RUN install2.r -s \
   shinythemes shinyWidgets viridis viridisLite wrswoR yaml data.table \
   mvtnorm gamlss.data mc2d cowplot gamlss digest piggyback
 
-RUN installGithub.r "ChristK/CKutils"
+RUN installGithub.r "ChristK/CKutils@8bb4c0d"
