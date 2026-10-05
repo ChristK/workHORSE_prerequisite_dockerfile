@@ -1,6 +1,6 @@
 FROM rocker/r-ver:4.2.1
 
-LABEL maintainer "Chris Kypridemos <ckyprid@liverpool.ac.uk>"
+LABEL maintainer="Chris Kypridemos <ckyprid@liverpool.ac.uk>"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
